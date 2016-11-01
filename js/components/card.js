@@ -5,7 +5,7 @@ var Card = function() {
     var statement = "This is a card";
 
     return (
-        <div>{statement}</div>
+        <div className="card">{statement}</div>
     )
 };
 
