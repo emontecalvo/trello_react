@@ -15,7 +15,6 @@ var BoardContainer = React.createClass({
 		});
 	},
 	onSubmit: function(event) {
-		console.log(event.target.value);
 		event.preventDefault();
 		this.setState({
 			lists: this.state.lists.concat([this.state.title])

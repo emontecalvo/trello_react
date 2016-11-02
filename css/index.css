@@ -2,6 +2,7 @@
     width: 80%;
     text-align: center;
     border: 1px solid black;
+    border-radius: 3px;
     padding: 10px;
     margin: 10px;
 }
@@ -9,6 +10,7 @@
 .card-list {
     text-align: center;
     border: 3px solid blue;
+    border-radius: 8px;
     padding: 10px;
     margin: 5px 10px auto;
 
@@ -17,6 +19,19 @@
 .board-list {
     text-align: center;
     border: 3px solid red;
+    border-radius: 8px;
+    border-radius: 3px;
     padding: 10px;
     margin: auto;
+}
+
+.list-form {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+}
+
+.list-div {
+    display: flex;
+    flex-wrap: wrap;
 }
