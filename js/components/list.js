@@ -2,11 +2,11 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Card = require('./card');
 
-var List = React.createClass ({
+var List = React.createClass({
 	getInitialState: function() {
 		return {
 			changed: false,
-			clicked: false
+			click: false
 		};
 	},
 	onAddInputChanged: function() {
@@ -14,33 +14,31 @@ var List = React.createClass ({
 			changed: true
 		});
 	},
-	onButtonClick: function() {
+	onAddSubmit: function(event) {
+		event.preventDefault();
 		this.setState({
-			clicked: true
+			click: true
 		});
 	},
 	render: function() {
-		var cards = props.cards.map(card => {
+		var cards = this.props.cards.map(card => {
 			return (<Card text={card}/>);
 		});
-
 		return (
 			<div className="card-list">
-				{props.title}<br/>
+				{this.props.title}<br/>
 				{cards}
 				<form>
 					<input type="text" onChange={this.onAddInputChanged} />
-					<Button onClick={this.onButtonClick} text="Submit"/>
+					<Button onClick={this.onAddSubmit} text="Submit" />
 				</form>
 			</div>
-		);  
+		);
 	}
 });
 
 var Button = function(props) {
-	return <button onClick={props.onClick}></button>;
+	return <button onClick={props.onClick}>{props.text}</button>;
 };
-
-
 
 module.exports = List;
