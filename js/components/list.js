@@ -8,14 +8,16 @@ var List = React.createClass({
 			return (<Card text={card}/>);
 		});
 		return (
-			<div className="card-list">
-				{this.props.title}<br/>
-				{cards}
-				<form onSubmit={this.props.onAddSubmit}>
-					<input type="text" onChange={this.props.onAddInputChanged} />
-					<input type="submit" text="Submit" />
-				</form>
-			</div>
+			<div>
+				<div className="card-list">
+					{this.props.title}<br/>
+					{cards}
+					<form onSubmit={this.props.onAddSubmit}>
+						<input type="text" onChange={this.props.onAddInputChanged} />
+						<input type="submit" text="Submit" />
+					</form>
+				</div>
+			</div>	
 		);
 	}
 });
