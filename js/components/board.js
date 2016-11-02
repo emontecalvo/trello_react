@@ -8,12 +8,16 @@ var Board = React.createClass({
 		var lists = this.props.lists.map(list => {
 				return (<ListContainer title={list} />);
 		});
+		var style = {
+				display: "flex",
+				flexWrap: "wrap"
+		};
 		return (
-			<div>
+			<div style={style}>
 				{lists}
-				<form>
+				<form onSubmit={this.props.onAddSubmit} >
 					<input type="text" onChange={this.props.onAddInputChanged}/>
-					<input type="submit" onClick={this.props.onAddSubmit} text="Submit" />
+					<input type="submit" text="Submit" />
 				</form>
 			</div>
 		);		

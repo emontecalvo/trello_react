@@ -11,9 +11,9 @@ var List = React.createClass({
 			<div className="card-list">
 				{this.props.title}<br/>
 				{cards}
-				<form>
+				<form onSubmit={this.props.onAddSubmit}>
 					<input type="text" onChange={this.props.onAddInputChanged} />
-					<input type="submit" onClick={this.props.onAddSubmit} text="Submit" />
+					<input type="submit" text="Submit" />
 				</form>
 			</div>
 		);

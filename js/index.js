@@ -18,5 +18,5 @@ var BoardContainer = require('./components/board-container');
 // });
 
 document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<BoardContainer />, document.getElementById('app'));
+    ReactDOM.render(<BoardContainer title="BOARD"/>, document.getElementById('app'));
 });

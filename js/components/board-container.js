@@ -20,11 +20,12 @@ var BoardContainer = React.createClass({
 		this.setState({
 			lists: this.state.lists.concat([this.state.title])
 		});
+		event.target.reset();
 	},
 	render: function() {
-		console.log(this.state.lists);
 		return (
 			<div className="board-list">
+				{this.props.title}<br/>
 				<Board listTitle={this.state.title} lists={this.state.lists} onAddInputChanged={this.onText} onAddSubmit={this.onSubmit} />
 			</div>
 		);

@@ -19,6 +19,7 @@ var ListContainer = React.createClass({
 		this.setState({
 			cards: this.state.cards.concat([this.state.text])
 		});
+		event.target.reset();
 	},
 	render: function() {
 		return (
