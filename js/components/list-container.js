@@ -9,22 +9,20 @@ var ListContainer = React.createClass({
 			cards: []
 		};
 	},
-	onAddInputChanged: function(event) {
-		event.preventDefault();
+	onText: function(event) {
 		this.setState({
 			text: event.target.value
 		});
 	},
-	onAddSubmit: function(event) {
+	onSubmit: function(event) {
 		event.preventDefault();
 		this.setState({
-			cards: this.state.cards.push(this.state.text)
+			cards: this.state.cards.concat([this.state.text])
 		});
 	},
 	render: function() {
-		console.log(this.props);
 		return (
-			<List cards={this.state.cards} onAddInputChanged={this.onText} onAddSubmit={this.onSubmit} />
+			<List title={this.props.title} cards={this.state.cards} onAddInputChanged={this.onText} onAddSubmit={this.onSubmit} />
 		);
 	}
 });
