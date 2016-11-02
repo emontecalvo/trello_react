@@ -15,8 +15,8 @@ var Board = function(props) {
 			cards: ["First card in the list", "Second card in the list", "Third card in the list"]
 		}
 	]
+
 	var listsInBoard = [];
-	console.log(props);
 	for (var i = 0; i < listsCard.length; i++) {
 		listsInBoard.push(<List title={props.lists[i]} cards={listsCard[i].cards} />);
 	}
